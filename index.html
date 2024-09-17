@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع تحسين الألعاب والأداء</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="updateData()">
+
+    <!-- الشريط العلوي -->
+    <div class="navbar">
+        <div>By Loukmane Hadj Said</div>
+        <div>موقع تحسين الألعاب والأداء</div>
+    </div>
+
+    <!-- الصفحة الرئيسية -->
+    <div class="container">
+        <div class="frame">
+            <h2>مواقع الألعاب</h2>
+            <p>تحليل الشبكة، تحسين الاتصال، وتغيير DNS لتجربة أفضل.</p>
+            <button class="btn" onclick="window.location.href='#game-sites'">مواقع الألعاب</button>
+        </div>
+
+        <div class="frame">
+            <h2>الإعدادات العامة</h2>
+            <p>تحسين أداء الجهاز، مراقبة الموارد، وتقديم أفضل إعدادات للألعاب.</p>
+            <button class="btn" onclick="window.location.href='#general-settings'">الإعدادات العامة</button>
+        </div>
+    </div>
+
+    <!-- إطار الاستفسارات -->
+    <div class="email-frame">
+        <p>أرسل استفساراتك إلى: <strong>loukmanehadjsaid3@gmail.com</strong></p>
+    </div>
+
+    <!-- صفحة مواقع الألعاب -->
+    <div id="game-sites" class="frame">
+        <h2>معلومات الشبكة</h2>
+        <p>البينج: <span id="ping">جاري القياس...</span></p>
+        <p>خادم DNS المتصل: <span id="dns">جاري القياس...</span></p>
+        <button class="btn" onclick="optimizeConnection()">تحسين الاتصال</button>
+
+        <h2>أشهر خوادم DNS</h2>
+        <ul>
+            <!-- قائمة خوادم DNS -->
+            <li>Google DNS - 8.8.8.8 <button class="btn" onclick="changeDNS('8.8.8.8')">اتصال</button></li>
+            <li>Cloudflare DNS - 1.1.1.1 <button class="btn" onclick="changeDNS('1.1.1.1')">اتصال</button></li>
+            <li>OpenDNS - 208.67.222.222 <button class="btn" onclick="changeDNS('208.67.222.222')">اتصال</button></li>
+            <li>OpenDNS - 208.67.220.220 <button class="btn" onclick="changeDNS('208.67.220.220')">اتصال</button></li>
+            <li>Quad9 DNS - 9.9.9.9 <button class="btn" onclick="changeDNS('9.9.9.9')">اتصال</button></li>
+            <li>Quad9 DNS - 149.112.112.112 <button class="btn" onclick="changeDNS('149.112.112.112')">اتصال</button></li>
+            <li>Comodo Secure DNS - 8.26.56.26 <button class="btn" onclick="changeDNS('8.26.56.26')">اتصال</button></li>
+            <li>Comodo Secure DNS - 8.20.247.20 <button class="btn" onclick="changeDNS('8.20.247.20')">اتصال</button></li>
+            <li>DNS.Watch - 84.200.69.80 <button class="btn" onclick="changeDNS('84.200.69.80')">اتصال</button></li>
+            <li>DNS.Watch - 84.200.70.40 <button class="btn" onclick="changeDNS('84.200.70.40')">اتصال</button></li>
+            <li>SafeDNS - 195.46.39.39 <button class="btn" onclick="changeDNS('195.46.39.39')">اتصال</button></li>
+            <li>SafeDNS - 195.46.39.40 <button class="btn" onclick="changeDNS('195.46.39.40')">اتصال</button></li>
+        </ul>
+    </div>
+
+    <!-- صفحة الإعدادات العامة -->
+    <div id="general-settings" class="frame">
+        <h2>معلومات الجهاز</h2>
+        <p>استهلاك المعالج: <span id="cpu">جاري القياس...</span></p>
+        <p>استهلاك بطاقة الرسوميات: <span id="gpu">جاري القياس...</span></p>
+        <p>استهلاك الذاكرة: <span id="ram">جاري القياس...</span></p>
+        <p>عدد الإطارات: <span id="fps">جاري القياس...</span></p>
+
+        <h2>إجراءات تحسين الأداء</h2>
+        <button class="btn" onclick="optimizePerformance('close-background-apps')">إغلاق التطبيقات الخلفية</button>
+        <button class="btn" onclick="optimizePerformance('power-settings')">تحسين إعدادات الطاقة</button>
+        <button class="btn" onclick="optimizePerformance('gpu-settings')">رفع أداء GPU</button>
+        <button class="btn" onclick="optimizePerformance('memory-management')">تحسين إدارة الذاكرة</button>
+    </div>
+
+    <!-- الشريط السفلي -->
+    <div class="footer">
+        جميع الحقوق محفوظة 2024
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
